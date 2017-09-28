@@ -17,13 +17,11 @@ class ViewController: UIViewController {
     
     lazy var dropList:LYDropListView = {
         //传入一个二维数组即可
-        let drop = LYDropListView.init(frame: CGRect.init(x: 0, y: kNaviHeight, width: screenWidth, height: 40), tableArr:[self.moneyArray,self.limitArray,self.sortArray])
-        drop.selectClosure = { (_ tag:Int,_ row:Int)->Void in
-         //tag-100 就是二维数组第几个 row就是第几个cell
-          print(tag-100,row)
-          
-            
-        }
+        let drop = LYDropListView.init(frame: CGRect.init(x: 0, y: kNaviHeight, width: screenWidth, height: 40), tableArr: [self.moneyArray,self.limitArray,self.sortArray], selectClosure: { (tag, row) in
+            //tag - 100是第几个标题菜单，row是菜单第几行
+              print(tag-100,row)
+        })
+       
         return drop
     }()
     override func viewDidLoad() {

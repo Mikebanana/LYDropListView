@@ -15,12 +15,13 @@ class LYDropListView: UIView,UITableViewDelegate,UITableViewDataSource{
 
     var maskViewSS:UIView?
     var selectClosure:((_ tag:Int,_ row:Int)->Void)?
-    init(frame: CGRect,tableArr:[[String]]) {
+    init(frame: CGRect,tableArr:[[String]],selectClosure : @escaping (_ tag:Int,_ row:Int)->Void) {
         super.init(frame: frame)
         self.titleArray = tableArr.map({ (arr) -> String in
             return arr[0]
         })
         self.tableArray = tableArr
+        self.selectClosure = selectClosure
         self.backgroundColor = UIColor.white
         self.setTitleButton()
         setMaskView()
