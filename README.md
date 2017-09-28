@@ -1,6 +1,7 @@
 # LYDropListView
 iOS Swift 下拉菜单列表
-#调用方法
+
+#调用方法#
 ```
    //数据
     let moneyArray:[String] = ["不限金额","0~1000元","1001~2000元","2001~3000元","3001~5000元","5000元以上"]
@@ -13,6 +14,6 @@ iOS Swift 下拉菜单列表
               print(tag-100,row)
         })
 ```
-#效果图展示
+#效果图展示#
 
 ![LYDropListView.gif](http://upload-images.jianshu.io/upload_images/3095453-8b11c28b6558bf79.gif?imageMogr2/auto-orient/strip)
